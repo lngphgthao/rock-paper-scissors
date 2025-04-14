@@ -15,32 +15,38 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     let human = humanChoice.toLowerCase();
+    const div = document.getElementById("#result");
+
     if ((human == "rock" && computerChoice == "scissors")
     ||  (human == "scissors" && computerChoice == "paper")
     ||  (human == "paper" && computerChoice == "rock"))
     {
         humanScore++;
-        console.log(`Human wins! ${human} beats ${computerChoice}`);
+        div.textContent = `Human wins! ${human} beats ${computerChoice}`;
     } else if (human == computerChoice) {
-        console.log(`It's a tie! ${human} vs ${computerChoice}`);
+        div.textContent = `It's a tie! ${human} vs ${computerChoice}`;
     } else {
         computerScore++;
-        console.log(`Computer wins! ${computerChoice} beats ${human}`);
+        div.textContent = `Computer wins! ${computerChoice} beats ${human}`;
     } 
 }
 
 function playGame() {
-    for (let i = 0; i <= 5; i++) {
-        let humanSelection = getHumanChoice();   
-        let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-    
-    if (humanScore > computerScore) console.log("Human wins!");
-    else if (humanScore == computerScore) console.log("It's a tie!");
-    else console.log("Computer wins!");
+    const buttons = document.getElementById("#options");
 
-    humanScore = 0; computerScore = 0;
+    buttons.addEventListener("click", (e) => {
+        let target = e.target;
+
+        switch (target.id) {
+            case "rock":
+                playRound("rock", getComputerChoice());
+            case "paper":
+                playRound("paper", getComputerChoice());
+            case "scissors":
+                playRound("scissors", getComputerChoice());
+        }   
+    });
 }
 
 playGame();
+
