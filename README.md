@@ -12,36 +12,28 @@ This is a simple Rock-Paper-Scissors game implemented in JavaScript. The game al
 
 - Play against a computer opponent
 - Randomized computer choices
-- Display of results in the console after each round
+- Display of results in the console and on the webpage
+- Score tracking for both the user and the computer
+- Game ends when either player reaches 5 points
 
-## Installation
+## Live Demo
 
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/lngphgthao/rock-paper-scissors.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd rock-paper-scissors
-   ```
-
-## Usage
-
-Open the `index.html` file in a web browser to start the game. Press `F12` to open the DevTools, navigate to the console.
+- Visit the [live demo](https://lngphgthao.github.io/rock-paper-scissors/) to play the game.
 
 ## How to Play
 
 1. Open the game in your browser.
 2. Click on your choice: Rock, Paper, or Scissors.
 3. The computer will randomly select its move.
-4. The result will be displayed.
-5. Repeat the process or exit the game.
+4. The result of the round will be displayed on the webpage.
+5. The first to reach 5 points wins the game.
+6. Refresh the page to reset the game.
 
-## Contributing
+## Technologies Used
 
-Feel free to submit issues or pull requests if you want to improve the project.
+- **HTML**: For structuring the webpage.
+- **CSS**: For styling the game interface.
+- **JavaScript**: For game logic and interactivity.
 
-## Author
-
+---
 Created by [lngphgthao](https://github.com/lngphgthao).
-
